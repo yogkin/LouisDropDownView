@@ -57,33 +57,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        idpcasv.setOnClickListener(new ProvinceCityAreaSelectView.onViewClickListener() {
+            @Override
+            public void onClick(String provice, String proviceId, String city, String cityId, String area, String areaId) {
+                Log.e(TAG, "onClick() called with: provice = [" + provice + "], proviceId = [" + proviceId + "], city = [" + city + "], cityId = [" + cityId + "], area = [" + area + "], areaId = [" + areaId + "]");
+            }
+        });
 
         Button id_btn= (Button) findViewById(R.id.id_btn);
         id_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG,"=================DropDownView======================");
-                Log.i(TAG, "onClick:getSelectKey "+idddv.getSelectKey());
-                Log.i(TAG, "onClick: getSelectName"+idddv.getSelectName());
-                Log.i(TAG,"=================DateSelectView======================");
-                Log.i(TAG, "onClick: getNowSelectData"+iddsv.getNowSelectData());
-                Log.i(TAG, "onClick: getNowSelectDataFixedNowData"+iddsv.getNowSelectDataFixedNowData());
-                Log.i(TAG,"=================ProvinceCityAreaSelectView======================");
-                Log.i(TAG, "onClick: getProvinceCityAreaKey"+idpcasv.getProvinceCityAreaKey());
-                Log.i(TAG, "onClick: getProvinceCityAreaNameStr"+idpcasv.getProvinceCityAreaNameStr());
-                Log.i(TAG, "onClick: getProvinceCityAreaNameStrWithOutFix"+idpcasv.getProvinceCityAreaNameStrWithOutFix());
-                Log.i(TAG,"=================ProCateSelectView======================");
-                Log.i(TAG, "onClick: getProCateKey"+idpcsv.getProCateKey());
-                Log.i(TAG, "onClick: getProCateNameOnlyChild"+idpcsv.getProCateNameOnlyChild());
-                Log.i(TAG, "onClick: getProCateKeyOnlyChildId"+idpcsv.getProCateKeyOnlyChildId());
-                Log.i(TAG,"=================MultiSelectView======================");
-                Log.i(TAG, "onClick: getSelectedKey"+multiSelectView.getSelectedKey());
-                Log.i(TAG,"==================MultiSelectView_HasChild=====================");
-                Log.i(TAG, "onClick: getSelectedKey"+idmsvgac.getSelectedKey());
-                Log.i(TAG,"==================ClassfiySeletView=====================");
-                Log.i(TAG, "onClick: getSelectedClassfiyKey"+id_csv.getSelectedClassfiyKey());
-                Log.i(TAG, "onClick: getSelectedClassfiyKeyWithoutFix"+id_csv.getSelectedClassfiyKeyWithoutFix());
+                Log.e(TAG,"=================DropDownView======================");
+                Log.e(TAG, "onClick:getSelectKey "+idddv.getSelectKey());
+                Log.e(TAG, "onClick: getSelectName"+idddv.getSelectName());
+                Log.e(TAG,"=================DateSelectView======================");
+                Log.e(TAG, "onClick: getNowSelectData"+iddsv.getNowSelectData());
+                Log.e(TAG, "onClick: getNowSelectDataFixedNowData"+iddsv.getNowSelectDataFixedNowData());
+                Log.e(TAG,"=================ProvinceCityAreaSelectView======================");
+                Log.e(TAG, "onClick: getProvinceCityAreaKey"+idpcasv.getProvinceCityAreaKey());
+                Log.e(TAG, "onClick: getProvinceCityAreaNameStr"+idpcasv.getProvinceCityAreaNameStr());
+                Log.e(TAG, "onClick: getProvinceCityAreaNameStrWithOutFix"+idpcasv.getProvinceCityAreaNameStrWithOutFix());
+                Log.e(TAG,"=================ProCateSelectView======================");
+                Log.e(TAG, "onClick: getProCateKey"+idpcsv.getProCateKey());
+                Log.e(TAG, "onClick: getProCateNameOnlyChild"+idpcsv.getProCateNameOnlyChild());
+                Log.e(TAG, "onClick: getProCateKeyOnlyChildId"+idpcsv.getProCateKeyOnlyChildId());
+                Log.e(TAG,"=================MultiSelectView======================");
+                Log.e(TAG, "onClick: getSelectedKey"+multiSelectView.getSelectedKey());
+                Log.e(TAG,"==================MultiSelectView_HasChild=====================");
+                Log.e(TAG, "onClick: getSelectedKey"+idmsvgac.getSelectedKey());
+                Log.e(TAG,"==================ClassfiySeletView=====================");
+                Log.e(TAG, "onClick: getSelectedClassfiyKey"+id_csv.getSelectedClassfiyKey());
+                Log.e(TAG, "onClick: getSelectedClassfiyKeyWithoutFix"+id_csv.getSelectedClassfiyKeyWithoutFix());
             }
         });
 

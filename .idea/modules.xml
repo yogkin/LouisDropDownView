@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DropDownViewLib/DropDownViewLib.iml" filepath="$PROJECT_DIR$/DropDownViewLib/DropDownViewLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LouisDropDownView.iml" filepath="$PROJECT_DIR$/LouisDropDownView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LouisDropDownView.iml" filepath="$PROJECT_DIR$/.idea/LouisDropDownView.iml" />
+      <module fileurl="file://D:\GitProjects\LouisDropDownView\LouisDropDownView.iml" filepath="D:\GitProjects\LouisDropDownView\LouisDropDownView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

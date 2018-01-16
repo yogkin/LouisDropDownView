@@ -27,6 +27,7 @@ public class ProvinceCityAreaSelectView extends LinearLayout {
     private DropDownView id_ddv_city;
     private DropDownView id_ddv_area;
     private List<Province> provinceList;
+    private onViewClickListener listener;
     // private int nowProvincePos=0;
 
     private final String ALL_AREA_KEY_DEFAULT = "000000"; // see in ssq.json
@@ -108,6 +109,7 @@ public class ProvinceCityAreaSelectView extends LinearLayout {
             public void onItemClick(Map<String, Object> map, int pos, int realPos) {
 
                 initInnerCity(realPos);
+                initInnerArea(realPos,0);
             }
         });
 
@@ -163,6 +165,15 @@ public class ProvinceCityAreaSelectView extends LinearLayout {
         {
             id_ddv_area.setVisibility(GONE);
         }
+
+        id_ddv_area.setOnItemClickListener(new DropDownView.OnItemClickListener() {
+            @Override
+            public void onItemClick(Map<String, Object> map, int pos, int realPos) {
+                listener.onClick(id_ddv_province.getSelectName(),id_ddv_province.getSelectKey(),id_ddv_city.getSelectName(),id_ddv_city.getSelectKey(),id_ddv_area.getSelectName(),id_ddv_area.getSelectKey());
+            }
+        });
+
+        listener.onClick(id_ddv_province.getSelectName(),id_ddv_province.getSelectKey(),id_ddv_city.getSelectName(),id_ddv_city.getSelectKey(),id_ddv_area.getSelectName(),id_ddv_area.getSelectKey());
 
     }
 
@@ -231,6 +242,8 @@ public class ProvinceCityAreaSelectView extends LinearLayout {
         id_ddv_province.setSelectNameByKey(provinceid);
         id_ddv_city.setSelectNameByKey(cityid);
         id_ddv_area.setSelectNameByKey(areaid);
+
+
     }
   /*  public void setupProvinceCityAreaByID(String provinceid,String cityid,String areaid){
         String province="";
@@ -277,6 +290,16 @@ public class ProvinceCityAreaSelectView extends LinearLayout {
         id_ddv_city.setVisibility(GONE);
         id_ddv_area.setVisibility(GONE);
     }
+
+    public interface onViewClickListener{
+        void onClick(String provice,String proviceId,String city,String cityId,String area,String areaId);
+    }
+
+
+    public void setOnClickListener(onViewClickListener o){
+        this.listener = o;
+    }
+
 
     public String getProvinceCityAreaNameStr(){
         String province = id_ddv_province.getSelectName();

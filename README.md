@@ -1,5 +1,6 @@
 # LouisDropDownView
-# 引入方式implementation 'com.github.yogkin:LouisDropDownView:0.0.2'</br>
+# 引入方式</br>
+implementation 'com.github.yogkin:LouisDropDownView:0.0.2'</br>
 :grin: 自定义下拉选择 、时间选择控件、省市区、多选对话框、二级分类多选、列表二级分类选择
 ![image](https://github.com/louisgeek/LouisDropDownView/blob/master/screenshots/pic2.png)
 ![image](https://github.com/louisgeek/LouisDropDownView/blob/master/screenshots/pic1.png)
